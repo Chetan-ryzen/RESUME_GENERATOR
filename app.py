@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = ""
 def generate_resume(name, email, phone, education, experience, skills, objective):
     prompt = f"""
     You are a professional resume builder AI. Generate a clean, ATS-friendly resume in text format based on the following inputs:
@@ -55,4 +55,5 @@ def index():
     return render_template('index.html', resume=None)
 
 if __name__ == '__main__':
+
     app.run(debug=True)
